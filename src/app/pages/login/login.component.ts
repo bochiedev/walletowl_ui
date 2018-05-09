@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Http, Response, Headers } from '@angular/http';
 export class LoginComponent implements OnInit {
 
   constructor(
+     private router: Router,
     private http: Http,
   ) { }
 
