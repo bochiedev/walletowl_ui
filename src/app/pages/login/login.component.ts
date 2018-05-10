@@ -33,17 +33,18 @@ export class LoginComponent implements OnInit {
   newlogin() {
 
     console.log(this.login)
-
     this.loginservice.getLoginToken(this.login).subscribe(
       res => {
 
         res = res.json();
+         localStorage.setItem("token", res["token"]);
+         this.router.navigate(['/dashboard']);
         console.log(res)
 
       },
       error => {
         this.app_error = true
-        console.log(error.status)
+        console.log(error)
       })
 
   }

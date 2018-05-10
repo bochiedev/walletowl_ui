@@ -19,4 +19,11 @@ export class LoginService {
 
     return this.http.post(url, JSON.stringify(credentials), { headers: headers });
   }
+
+  logOut() {
+
+    localStorage.removeItem('token');
+
+
+  }
 }

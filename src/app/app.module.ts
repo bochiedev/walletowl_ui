@@ -11,6 +11,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginService } from './services/login/login.service';
+import { RegisterService } from './services/register/register.service';
+import { TypingAnimationDirective } from 'angular-typing-animation'
+
 
 
 
@@ -23,7 +26,8 @@ import { LoginService } from './services/login/login.service';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    TypingAnimationDirective,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -45,6 +49,7 @@ import { LoginService } from './services/login/login.service';
 
   ],
   providers: [
+    RegisterService,
     LoginService,
   ],
   bootstrap: [AppComponent]

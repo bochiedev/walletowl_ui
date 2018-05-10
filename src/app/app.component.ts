@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
-
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,8 @@ export class AppComponent {
   ) { }
 
   ngOnInit() {
+    AOS.init();
+  
 
   }
 
